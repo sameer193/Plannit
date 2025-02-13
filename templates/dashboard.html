@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="display: flex; flex-direction: column; border: 1px solid black; padding: 20px;background-color: cadetblue;">
+    <h1>This is Dashboard Page</h1>
+    <h3>User Data</h3>
+    <p>Name - {{current_user.username}} </p>
+    <p>Email - {{current_user.email}} </p>
+    <p>Role - {{current_user.role}} </p>
+    <div>
+        <a href="{{ url_for('profile' ) }}" style="border: 1px solid blanchedalmond; text-decoration: none; color: aliceblue; padding: 5px;">View profile</a>
+        <a href="{{ url_for('logout' ) }}" style="border: 1px solid blanchedalmond;text-decoration: none; color: aliceblue; padding: 5px;">Logout User</a>
+    </div>
+</div>
+{% endblock %}
